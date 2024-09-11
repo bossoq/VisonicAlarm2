@@ -395,7 +395,7 @@ class System(object):
         for device in devices:
             if device is not None:
                 if device['subtype'] is not None:
-                    if 'CONTACT' in device['subtype']:
+                    if 'CONTACT' in device['subtype'] or device['subtype'] == 'HW_ZONE_CONNECTED_DIRECTLY_TO_THE_PANEL':
                         contact_device = ContactDevice(
                             id=device['id'],
                             name=device['name'],
